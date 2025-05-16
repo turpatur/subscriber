@@ -12,3 +12,14 @@
 - 141 Unacked -> 141 message sudah dikirim ke subscriber, tetapi belun diacknowledged oleh subscriber. 
 - Maka, total adalah 0 + 141 = 141. 
 ![alt text](image.png)
+
+4. Multiple subscriber 
+-Message queue dapat berkurang dengan cepat dan message dapat diacknowledge lebih cepat dengan banyak subscriber dibandingkan satu subscriber karena message dapat diproses secara paralel. 
+![alt text](image-1.png)
+![alt text](image-2.png)
+
+5. Reflection
+- Improvements:
+    - Tidak ignore result dengan _ pada publisher, gunakan expect atau return result sebagai pengganti. 
+    - Gunakan logging yang proper daripada println.
+    - fix infinite loop{} dengan shutdown handling yang lebih proper. 
